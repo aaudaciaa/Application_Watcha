@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby "2.3.5"
 
 gem 'rails_12factor', group: :production
-gem 'pg'
 
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
@@ -57,5 +56,5 @@ group :development do
   gem 'awesome_print'
   gem 'pry-rails'
   gem 'meta_request'
-  gem 'sqlite3' 
+  gem 'sqlite3'
 end
