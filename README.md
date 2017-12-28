@@ -55,3 +55,10 @@ fake 왓챠 based on rails
       end
     end
 ```
+
+## 4. 사진 업로드
+
+## 5. 유저 역할 구분 / 관리자 페이지
+- User model ->role, :stirng, default: "user"
+- role = ["user", "manager", "admin"] (유저는 3개의 역할 군으로 나눠져 있다.)
+- 

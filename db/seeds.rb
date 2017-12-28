@@ -20,3 +20,26 @@ list.each do |movie|
     director: movie["items"][0]["item"]["directors"][0]["name"]
   )
 end
+
+User.create(
+  email: "admin@admin.com",
+  password: "admin123",
+  password_confirmation: "admin123",
+  nickname: "관리자",
+  role: "admin"
+)
+
+User.create(
+  email: "man@man.com",
+  password: "man123",
+  password_confirmation: "man123",
+  nickname: "매니저",
+  role: "manager"
+)
+
+User.create(
+  email: "asdf@asdf.com",
+  password: "asdfasdf",
+  password_confirmation: "asdfasdf",
+  nickname: "양민"
+)

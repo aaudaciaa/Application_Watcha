@@ -40,6 +40,8 @@ class MoviesController < ApplicationController
       user_id: current_user.id,
       movie_id: params[:id]
     )
-    redirect_to root_path
+    redirect_to :back
   end
+
+  
 end

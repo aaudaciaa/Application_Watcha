@@ -1,0 +1,33 @@
+<main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+  <h1>관리자페이지</h1>
+
+  <h2>리뷰 현황</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>영화</th>
+          <th>작성자</th>
+          <th>평점</th>
+          <th>리뷰</th>
+          <th>관리자</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @reviews.each do |review| %>
+          <tr>
+            <td><%= review.id %></td>
+            <td><%= review.movie.title %></td>
+            <td><%= review.user.nickname %></td>
+            <td><%= review.rating %></td>
+            <td><%= review.comment %></td>
+            <td>
+              <%= link_to "삭제", "/admin/reviews_destroy/#{review.id}", method: :delete, class: 'btn btn-primary', data: {confirm: "정말로 삭제하시겠습니까?"} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>
